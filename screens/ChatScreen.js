@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View, Text } from "react-native";
-import { FlatList } from "react-native-gesture-handler";
+import { FlatList, TextInput } from "react-native-gesture-handler";
 
 export default function ChatScreen({ route }) {
     const { id } = route.params;
@@ -34,7 +34,9 @@ export default function ChatScreen({ route }) {
                     showsVerticalScrollIndicator={false}
                 />
             </View>
-            <View style={styles.inputContainer}></View>
+            <View style={styles.inputContainer}>
+                <TextInput></TextInput>
+            </View>
         </View>
     );
 }
